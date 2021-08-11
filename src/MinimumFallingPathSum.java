@@ -2,9 +2,37 @@ import java.util.*;
 
 public class MinimumFallingPathSum {
 
+    // time O(n^3), space O(n)
+    public static int minFallingPathSum(int[][] grid){
+        int m = grid.length;
+        int n = grid[0].length;
+        int[] dp = new int[n];
+        System.arraycopy(grid[0], 0, dp, 0, n);
+
+        for(int i = 1; i < m; i++){
+            int[] nextIterationDP = new int[n];
+            for(int j = 0; j < n; j++){
+                int min = Integer.MAX_VALUE;
+                for(int k = 0; k < n; k++){
+                    if(k == j) continue;
+                    min = Math.min(min, dp[k]);
+                }
+                nextIterationDP[j] = min + grid[i][j];
+            }
+
+            dp = nextIterationDP;
+
+        }
+        int ans = Integer.MAX_VALUE;
+        for(int j = 0; j < n; j++){
+            ans = Math.min(ans, dp[j]);
+        }
+        return ans;
+    }
+
 
     // time O(n log n^2), space O(n)
-    public static int minFallingPathSum(int[][] grid){
+    public static int minFallingPathSumSort(int[][] grid){
         int m = grid.length;
         int n = grid[0].length;
         int[] dp = new int[n];
@@ -31,8 +59,10 @@ public class MinimumFallingPathSum {
         }
         return ans;
     }
+
+
     // time O(n^2), space O(n)
-    public static int minFallingPathSumImproved(int[][] grid){
+    public static int minFallingPathSumOptimal(int[][] grid){
         int m = grid.length;
         int n = grid[0].length;
         int[] dp = new int[n];
@@ -71,7 +101,7 @@ public class MinimumFallingPathSum {
 
     public static void main(String[] args) {
         int[][] grid = new int[][] {{1,2,3},{4,5,6},{7,8,9}};
-        System.out.println(minFallingPathSumImproved(grid));
+        System.out.println(minFallingPathSum(grid));
     }
 
 }
