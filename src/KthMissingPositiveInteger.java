@@ -1,7 +1,7 @@
 public class KthMissingPositiveInteger {
 
     // time O(log n), space O(1)
-    public static int findKthPositive(int[] arr, int k) {
+    public int findKthPositive(int[] arr, int k) {
         int l = 0;
         int r = arr.length - 1;
         while (l < r) {
@@ -13,10 +13,6 @@ public class KthMissingPositiveInteger {
             }
         }
         return l + k;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(findKthPositive(new int[]{2,3,4,7,11}, 5));
     }
 
 }
