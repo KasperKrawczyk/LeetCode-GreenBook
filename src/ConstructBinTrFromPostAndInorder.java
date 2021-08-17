@@ -21,7 +21,7 @@ public class ConstructBinTrFromPostAndInorder {
         // that both arrays are the same length, so we can subtract from the current postIdx the difference
         // of the current end of the inorder array's subsection and inorderIdx ( + 1)
         newRoot.left = buildTree(postorder, inorMap, postIdx - (inorEnd - inorderIdx  + 1), inorStart, inorderIdx - 1);
-        newRoot.right = buildTree(postorder, inorMap, postIdx - 1,inorderIdx + 1, inorEnd);
+        newRoot.right = buildTree(postorder, inorMap, postIdx - 1, inorderIdx + 1, inorEnd);
 
         return newRoot;
     }
