@@ -65,8 +65,9 @@ public class RecursiveMultiply {
         int smallerDivided = smaller >> 1;
         int half = productFastRec(smallerDivided, bigger);
 
+        // instead of calling Rec() on the odd part, we can just add 'bigger' to the doubled even part
         if(smaller % 2 == 1){
-            return half + half + bigger; // instead of calling Rec() on the odd part, we can just add 'bigger' to doubled even part
+            return half + half + bigger;
         } else {
             return half + half;
         }
