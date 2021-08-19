@@ -1,6 +1,7 @@
 
 
 public class SmallestStringStartingFromLeaf {
+    // time O(n), space O(n)
     public String smallestFromLeaf(TreeNode root) {
         String[] ans = new String[] {null};
         dfs(ans, "", root);
