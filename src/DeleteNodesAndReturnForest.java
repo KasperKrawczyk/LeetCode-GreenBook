@@ -53,12 +53,8 @@ public class DeleteNodesAndReturnForest {
         root.left = dfs(set, ans, root.left);
         root.right = dfs(set, ans, root.right);
         if(set.contains(root.val)){
-            if(root.left != null){
-                ans.add(root.left);
-            }
-            if(root.right!= null){
-                ans.add(root.right);
-            }
+            if(root.left != null) ans.add(root.left);
+            if(root.right != null) ans.add(root.right);
             return null;
         }
         return root;
