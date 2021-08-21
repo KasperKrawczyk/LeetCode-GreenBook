@@ -12,7 +12,6 @@ public class DeleteNodesAndReturnForest {
 
         while (!queue.isEmpty()) {
             TreeNode cur = queue.poll();
-            System.out.println("cur = " + cur.val);
             if (set.contains(cur.val)) {
                 ans.remove(cur);
                 if (cur.left != null) {
