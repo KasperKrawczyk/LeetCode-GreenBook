@@ -25,4 +25,23 @@ public class TrappingRainWater {
 
         return ans;
     }
+
+//    public static int trapFast(int[] height){
+//        int lEdge = 0;
+//        int rEdge = height.length - 1;
+//
+//        while(lEdge < rEdge && height[lEdge] <= height[lEdge + 1]){
+//            lEdge++;
+//        }
+//        while(lEdge < rEdge && height[rEdge] <= height[rEdge - 1]){
+//            rEdge--;
+//        }
+//
+//        while(lEdge < rEdge){
+//            int left = height[lEdge];
+//            int right = height[rEdge];
+//
+//        }
+//    }
+
 }
