@@ -7,7 +7,7 @@ public class KthMissingPositiveInteger {
         while (l < r) {
             int mid = l + (r - l) / 2;
             if (arr[mid] - mid <= k) { // (arr[mid] - mid) will indicate how many numbers
-                l = mid + 1;           // are missing up and including given index
+                l = mid + 1;           // are missing up to and including given index
             } else {
                 r = mid - 1;
             }
