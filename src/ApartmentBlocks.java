@@ -72,6 +72,7 @@ public class ApartmentBlocks {
         ApartmentBlock a3 = new ApartmentBlock(buildings, new boolean[]{true, true, false});
         ApartmentBlock a4 = new ApartmentBlock(buildings, new boolean[]{false, true, false});
         ApartmentBlock a5 = new ApartmentBlock(buildings, new boolean[]{false, true, true});
+
         ApartmentBlock[] apartmentBlocks = new ApartmentBlock[] {
             a1, a2, a3, a4, a5
         };
