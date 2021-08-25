@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubsetsII {
+public class SubsetsIINoDuplicates {
     public List<List<Integer>> subsetsRec(int[] nums){
         List<List<Integer>> ans = new ArrayList<>();
         subsetsRecUtil(ans, new ArrayList<>(), nums, 0);
