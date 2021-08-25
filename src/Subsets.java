@@ -18,7 +18,7 @@ public class Subsets {
         }
     }
 
-    public List<List<Integer>> subsetsDFS(int[] nums) {
+    public static List<List<Integer>> subsetsDFS(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         ans.add(new ArrayList<>());
         for(int num : nums){
@@ -45,9 +45,20 @@ public class Subsets {
             return;
 
         }
+        temp.add(nums[cur]);
         subsetsRecUtil(ans, temp, nums, cur + 1);
         temp.remove(temp.size() - 1);
         subsetsRecUtil(ans, temp, nums, cur + 1);
+    }
+
+    public static void main(String[] args) {
+        List<List<Integer>> ans = subsetsDFS(new int[] {1,2,3});
+        for(List<Integer> l : ans){
+            for(Integer i : l){
+                System.out.print(i + ", ");
+            }
+            System.out.println();
+        }
     }
 
 }
