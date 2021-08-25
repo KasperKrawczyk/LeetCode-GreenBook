@@ -32,6 +32,7 @@ public class Subsets {
         return ans;
     }
 
+    // non-looping approach, building a binary tree, instead of an n-ary tree
     public List<List<Integer>> subsetsRec(int[] nums){
         List<List<Integer>> ans = new ArrayList<>();
         subsetsRecUtil(ans, new ArrayList<>(), nums, 0);
