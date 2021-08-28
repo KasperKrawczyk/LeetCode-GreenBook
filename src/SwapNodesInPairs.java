@@ -9,6 +9,8 @@ public class SwapNodesInPairs {
             return n;
         }
         ListNode toReturn = n;
+        // for pointers form a window we manipulate within:
+        // prev -> head -> neighbour -> next
         ListNode prev = n;
         ListNode head = n;
         ListNode neighbour = n;
