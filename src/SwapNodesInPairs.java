@@ -13,8 +13,8 @@ public class SwapNodesInPairs {
         // prev -> head -> neighbour -> next
         ListNode prev = n;
         ListNode head = n;
-        ListNode neighbour = n;
-        ListNode next = n;
+        ListNode neighbour;
+        ListNode next;
         boolean isHead = true;
         while(head != null && head.next != null){
             if(isHead){
@@ -24,7 +24,6 @@ public class SwapNodesInPairs {
                 head.next = next;
                 toReturn = neighbour;
                 // now move the window
-                prev = head;
                 head = next;
                 isHead = false;
                 continue;
