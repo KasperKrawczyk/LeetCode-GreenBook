@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class MaxAreaOfIsland {
-    public static int maxArea = 0;
-    public static int[][] dirs = new int[][] {{0,-1},{0,1},{-1,0},{1,0}};
-    public static boolean[][] visited;
-    public static int[][] matrix;
-    public static int maxAreaOfIsland(int[][] grid) {
+    public int maxArea = 0;
+    public int[][] dirs = new int[][] {{0,-1},{0,1},{-1,0},{1,0}};
+    public boolean[][] visited;
+    public int[][] matrix;
+    public int maxAreaOfIsland(int[][] grid) {
         matrix = grid;
         int n = grid.length;
         int m = grid[0].length;
@@ -22,7 +22,7 @@ public class MaxAreaOfIsland {
         return maxArea;
     }
 
-    private static int explore(int i, int j){
+    private int explore(int i, int j){
         Queue<int[]> queue = new ArrayDeque<>();
 
         queue.add(new int[]{i, j});
@@ -47,24 +47,9 @@ public class MaxAreaOfIsland {
         return size;
     }
 
-    private static boolean isValid(int k, int l){
+    private boolean isValid(int k, int l){
         return k >= 0 && k < matrix.length &&
                 l >= 0 && l < matrix[0].length &&
                 !visited[k][l] && matrix[k][l] == 1;
-    }
-
-    public static void main(String[] args) {
-        int[][] m = new int[][]{{0,0,1,0,0,0,0,1,0,0,0,0,0},
-                {0,0,0,0,0,0,0,1,1,1,0,0,0},
-                {0,1,1,0,1,0,0,0,0,0,0,0,0},
-                {0,1,0,0,1,1,0,0,1,0,1,0,0},
-                {0,1,0,0,1,1,0,0,1,1,1,0,0},
-                {0,0,0,0,0,0,0,0,0,0,1,0,0},
-                {0,0,0,0,0,0,0,1,1,1,0,0,0},
-                {0,0,0,0,0,0,0,1,1,0,0,0,0}};
-
-        int[][] m2 = new int[][] {{0,0,0,0,0,0,0,0}};
-
-        System.out.println(maxAreaOfIsland(m2));
     }
 }
