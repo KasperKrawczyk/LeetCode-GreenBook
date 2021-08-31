@@ -23,4 +23,20 @@ public class BinaryTreeLevelOrderTraversal {
         }
         return ans;
     }
+
+    public List<List<Integer>> levelOrderRec(TreeNode root) {
+        List<List<Integer>> ans = new ArrayList<>();
+        levelOrderRecUtil(ans, root, 0);
+        return ans;
+    }
+
+    private void levelOrderRecUtil(List<List<Integer>> ans, TreeNode root, int height){
+        if(root == null) return;
+        if(height == ans.size()){
+            ans.add(new LinkedList<>());
+        }
+        ans.get(height).add(root.val);
+        levelOrderRecUtil(ans, root.left, height + 1);
+        levelOrderRecUtil(ans, root.right, height + 1);
+    }
 }
