@@ -1,3 +1,5 @@
+package besttimetobuyandsellstock;
+
 public class BestTimeToBuyAndSellStock1 {
 
     // time O(n), space O(1)

@@ -1,3 +1,5 @@
+package jumpgame;
+
 import java.util.*;
 
 public class JumpGameIII {

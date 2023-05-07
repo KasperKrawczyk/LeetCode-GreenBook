@@ -1,3 +1,5 @@
+package jumpgame;
+
 public class JumpGameII {
     public int jump(int[] nums) {
 

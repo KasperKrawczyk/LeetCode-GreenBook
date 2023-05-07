@@ -1,3 +1,5 @@
+package besttimetobuyandsellstock;
+
 public class BestTimeToBuyAndSellStock2 {
     // time O(n), space O(1)
     public int maxProfit(int[] prices) {

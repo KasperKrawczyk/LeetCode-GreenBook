@@ -1,3 +1,5 @@
+package jumpgame;
+
 public class JumpGameI {
     public boolean canJump(int[] nums) {
         int maxJump = nums[0];

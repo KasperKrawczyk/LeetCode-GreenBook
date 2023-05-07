@@ -1,3 +1,5 @@
+package jumpgame;
+
 public class JumpGameVII {
 
     // time O(n), space O(n)
