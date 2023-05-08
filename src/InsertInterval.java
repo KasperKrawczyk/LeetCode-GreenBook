@@ -37,7 +37,7 @@ public class InsertInterval {
 
         // populate right
         for (int j = insertEnd; j < len; j++) {
-            ans[curInterval] = new int[] {intervals[curInterval][0], intervals[curInterval][1]};
+            ans[curInterval] = new int[] {intervals[j][0], intervals[j][1]};
             curInterval++;
         }
 
