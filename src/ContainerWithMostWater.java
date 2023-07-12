@@ -22,24 +22,22 @@ public class ContainerWithMostWater {
 
     // optimised approach: time O(n), space O(1)
     public int maxArea(int[] height) {
-        int n = height.length;
-        int i = 0;
-        int j = n - 1;
-
-        int ans = Integer.MIN_VALUE;
-
-        while(i < j){
-            int dist = j - i;
-            int min = Math.min(height[i], height[j]);
-            int cur = min * dist;
-            ans = Math.max(ans, cur);
-            if(height[i] < height[j]){
-                i++;
+        int left = 0;
+        int right = height.length - 1;
+        int width = 0;
+        int cur = 0;
+        int ans = 0;
+        while (left < right) {
+            width = right - left;
+            if (height[left] <= height[right]) {
+                cur = width * height[left];
+                left++;
             } else {
-                j--;
+                cur = width * height[right];
+                right--;
             }
+            ans = Math.max(ans, cur);
         }
-
         return ans;
     }
 
