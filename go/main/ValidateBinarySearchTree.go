@@ -6,7 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// time O(n), space O(1)
+// time O(n), space O(n)
 func isValidBST(root *TreeNode) bool {
 	return isValidRecursive(root, nil, nil)
 }
