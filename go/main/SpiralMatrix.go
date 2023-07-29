@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -37,20 +36,17 @@ func spiralOrder(matrix [][]int) []int {
 	for iMin <= iMax && jMin <= jMax {
 		// move right
 		for j := jMin; j <= jMax; j++ {
-			fmt.Println("right ", iMin, j)
 			arr = append(arr, matrix[iMin][j])
 		}
 		iMin++
 		// move down
 		for i := iMin; i <= iMax; i++ {
-			fmt.Println("down ", i, jMax)
 			arr = append(arr, matrix[i][jMax])
 		}
 		jMax--
 		if iMin <= iMax {
 			// move left
 			for j := jMax; j >= jMin; j-- {
-				fmt.Println("left ", iMax, j)
 				arr = append(arr, matrix[iMax][j])
 			}
 		}
@@ -59,7 +55,6 @@ func spiralOrder(matrix [][]int) []int {
 		if jMin <= jMax {
 			// move up
 			for i := iMax; i >= iMin; i-- {
-				fmt.Println("up ", i, jMin)
 				arr = append(arr, matrix[i][jMin])
 			}
 		}
